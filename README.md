@@ -36,6 +36,7 @@ Then run the frida.js program, which will connect to your emulator (bluestacks) 
 After the program ran, it will give you every fieldname and its classname and the string which is right for that.
 
 To clarify, normally the apk holds static private fields like UGZGJKHDOIHJS without a value. PairIp will give these strings a value so the apk works.
+You firstly have to check the classes.dex and write every class with only .static final string fields and random names into the targetClass array.
 
 After you extracted all required strings, you map them in a custom smali file with the program.py 
 You then have the smali files which you can replace in the apk with the old ones.
